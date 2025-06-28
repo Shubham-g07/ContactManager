@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"C:\Users\Lenovo\Downloads\hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.driver_class"> com.mysql.cj.jdbc.Driver </property>
+		<property name="connection.url"> jdbc:mysql://localhost:3306/myhiber?useSSL=false&amp;serverTimezone=UTC&amp;allowPublicKeyRetrieval=true </property>
+		<property name = "connection.username"> root </property>
+		<property name = "connection.password"> ShubhamMySql2025 </property>
+		<property name = "dialect"> org.hibernate.dialect.MySQL5Dialect </property>
+		<property name = "hbm2ddl.auto"> update </property>
+		<property name = "show_sql"> true </property>
+		<property name = "format_sql"> true </property>
+		<property name="cache.use_second_level_cache">true</property>
+		<property name="cache.region.factory_class">  org.hibernate.cache.ehcache.EhCacheRegionFactory</property>
+				
+		<mapping class = "com.mavenProj.maven_Proj.Student" />
+		<mapping class = "com.mavenProj.maven_Proj.Address" />
+		<mapping class = "com.mapping_tables.Question" />
+		<mapping class = "com.mapping_tables.Answer" />
+		<mapping class = "mapping2.Employee" />
+		<mapping class = "mapping2.Project" />
+		<mapping resource="com/mapping/xml/person.hbm.xml"/>
+
+	</session-factory>
+</hibernate-configuration>
