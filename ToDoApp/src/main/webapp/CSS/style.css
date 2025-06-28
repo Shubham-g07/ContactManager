@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+html,body {
+  overflow: hidden;  
+  height: 100vh;
+}
+.color{
+	background :#26a69a;
+}
+
+.btncolor{
+	background : #84ffff;
+	color : black;
+}
